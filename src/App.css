@@ -1,0 +1,132 @@
+/* Page Background Opposite of Calculator */
+body.dark {
+  background: #f0f0f0;
+}
+
+body.light {
+  background: #121212;
+}
+
+/* Calculator Container */
+.calculator-container {
+  margin: 50px auto;
+  width: 320px;
+  padding: 20px;
+  border-radius: 30px; /* smooth corners */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.calculator-container.dark {
+  background: black;
+  color: white;
+}
+
+.calculator-container.light {
+  background: white;
+  color: black;
+}
+
+/* Title */
+.title {
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  width: 60px;
+  height: 30px;
+  border-radius: 25px;
+  margin: 10px auto;
+  cursor: pointer;
+  background: #ccc;
+  position: relative;
+}
+
+.switch {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: 2px;
+  transition: 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.switch.dark {
+  left: 2px;
+  background: limegreen;
+}
+
+.switch.light {
+  left: 32px;
+  background: dodgerblue;
+}
+
+.toggle-switch:hover .switch {
+  box-shadow: 0 0 10px blue;
+}
+
+/* Display */
+.display {
+  text-align: right;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  font-size: 1.8rem;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+.result {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.btn {
+  border: none;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Dark theme buttons */
+.calculator-container.dark .btn {
+  background: #333;
+  color: white;
+}
+
+/* Light theme buttons */
+.calculator-container.light .btn {
+  background: #ddd;
+  color: black;
+}
+
+/* Hover effect – glow, not background fill */
+.btn:hover {
+  box-shadow: 0 0 12px rgba(0, 123, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* Special 0 button (pill-shaped like iOS) */
+.zero {
+  grid-column: span 2;
+  border-radius: 40px;
+}
